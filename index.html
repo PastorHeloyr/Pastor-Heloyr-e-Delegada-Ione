@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#071b3c">
+<title>Gerador de Foto de Perfil | Pastor Heloyr e Delegada Ione</title>
+<style>
+:root{--navy:#071b3c;--navy2:#102d58;--orange:#EE6400;--purple:#783F8E;--paper:#f7f7fa;--ink:#142344;--muted:#66728a;--line:#dbe0ea;--gradient:linear-gradient(90deg,var(--orange) 0%,var(--orange) 28%,var(--purple) 100%)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);font-family:Arial,Helvetica,sans-serif;color:var(--ink)}button,input{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.42}.brand-gradient{background:var(--gradient)}
+.header{padding:19px 20px 17px;border-bottom:5px solid var(--navy)}.head-inner{max-width:1050px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;flex:1;min-width:0}.brand img{max-width:100%;object-fit:contain;display:block}.brand .header-art{display:block;width:100%;max-width:420px;height:auto;max-height:128px;object-fit:contain}.head-divider{height:80px;width:2px;background:rgba(7,27,60,.35);flex:none}.image-fallback{display:none;color:var(--navy);font-weight:900;font-size:18px;text-align:center}.brand img.is-missing{display:none}.brand img.is-missing+.image-fallback{display:block}
+main{width:min(680px,calc(100% - 32px));margin:46px auto 66px}.eyebrow{text-transform:uppercase;font-size:11px;letter-spacing:2.5px;font-weight:900;color:var(--orange);margin:0 0 12px}.intro{text-align:center;margin-bottom:27px}.intro h1{font-size:clamp(27px,5vw,42px);line-height:1.12;letter-spacing:-1.4px;margin:0 0 13px;color:var(--navy)}.intro p{font-size:14px;line-height:1.65;color:var(--muted);max-width:530px;margin:auto}.panel{border:1px solid var(--line);background:white;padding:24px;border-radius:15px;box-shadow:0 12px 38px rgba(17,34,65,.07)}.panel-title{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 0 18px}.panel-title strong{font-size:18px;color:var(--navy)}.size-pill{font-size:11px;font-weight:800;background:#eef1f7;border:1px solid var(--line);padding:8px 10px;border-radius:40px;white-space:nowrap}.canvas-wrap{position:relative;width:min(100%,465px);aspect-ratio:1;margin:0 auto 20px;background:#edf0f5;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 4px 15px rgba(9,28,61,.08)}#canvas{display:block;width:100%;height:100%;touch-action:none;cursor:grab}#canvas:active{cursor:grabbing}.status{font-size:12px;color:var(--muted);text-align:center;min-height:20px;margin:0 0 14px;line-height:1.5}.status.error{color:#b02a28}.button{background:var(--navy);color:white;border:2px solid var(--navy);padding:13px 18px;min-height:50px;border-radius:8px;font-weight:900;font-size:12px;letter-spacing:.7px;transition:background .16s,border-color .16s,transform .16s}.button:hover:not(:disabled),.button:focus-visible,.button.active{background:var(--orange);border-color:var(--orange);color:white}.button:active:not(:disabled){transform:translateY(1px)}.button:focus-visible{outline:3px solid var(--purple);outline-offset:2px}.button.primary{background:var(--orange);border-color:var(--orange)}.button.primary:hover:not(:disabled),.button.primary:focus-visible{background:var(--navy);border-color:var(--navy)}.full{width:100%;display:flex;align-items:center;justify-content:center;gap:9px}.controls{margin-top:16px;display:none}.controls.visible{display:block}.control-heading{font-size:13px;font-weight:800;margin:0 0 12px;text-align:center}.zoom-row{display:flex;align-items:center;gap:12px}.small-button{flex:none;width:44px;height:42px;padding:0;font-size:22px}.zoom-row input{flex:1;min-width:0;accent-color:var(--orange)}.zoom-level{font-size:12px;font-weight:bold;min-width:43px;text-align:right;font-variant-numeric:tabular-nums}.hint{text-align:center;color:var(--muted);font-size:12px;line-height:1.5;margin:11px 0}.control-actions{display:flex;gap:10px;margin-top:15px}.control-actions .button{flex:1}.download{margin-top:16px}.panel .status{margin:12px 0}.panel .canvas-wrap{margin-bottom:0}.footer{border-top:5px solid var(--navy);padding:29px 18px 25px;text-align:center;color:var(--navy)}.foot-inner{max-width:850px;margin:auto;background:rgba(255,255,255,.88);border:1px solid rgba(255,255,255,.6);border-radius:12px;padding:24px 18px}.credit{font-size:13px;font-weight:700;margin:0 0 12px}.credit strong{font-weight:900}.social{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;color:var(--navy);background:rgba(255,255,255,.45);border:2px solid var(--navy);border-radius:50%;transition:.15s}.social:hover,.social:focus-visible{background:var(--navy);color:#fff}.social svg{width:22px;height:22px}.footer-line{width:100%;max-width:650px;border:0;border-top:1px solid rgba(7,27,60,.28);margin:20px auto}.legal{font-size:11px;line-height:1.8;font-weight:700;margin:0}.legal span{display:block}
+@media(max-width:550px){.header{padding:15px 11px}.head-inner{gap:8px}.brand{gap:4px}.brand .header-art{max-height:88px}.head-divider{height:56px}.image-fallback{font-size:13px}main{margin-top:32px;margin-bottom:45px}.panel{padding:15px;border-radius:11px}.panel-title strong{font-size:15px}.size-pill{font-size:10px;padding:7px}.control-actions{flex-wrap:wrap}.control-actions .button{min-width:40%}.canvas-wrap{width:78%;max-width:350px;margin-inline:auto}.panel-title{margin-bottom:16px}.panel .status{margin:12px 0 10px}}
+</style>
+</head>
+<body>
+<header class="header brand-gradient">
+ <div class="head-inner">
+  <div class="brand" aria-label="Pastor Heloyr">
+   <img class="header-art" src="imagens/heloyr-cabecalho.png" alt="Arte completa do Pastor Heloyr no cabeçalho" onerror="this.classList.add('is-missing')"><span class="image-fallback">PASTOR HELOYR</span>
+  </div>
+  <div class="head-divider" aria-hidden="true"></div>
+  <div class="brand" aria-label="Delegada Ione">
+   <img class="header-art" src="imagens/ione-cabecalho.png" alt="Arte completa da Delegada Ione no cabeçalho" onerror="this.classList.add('is-missing')"><span class="image-fallback">DELEGADA IONE</span>
+  </div>
+ </div>
+</header>
+<main>
+ <section class="intro">
+  <p class="eyebrow">Gerador de artes</p>
+  <h1>Crie sua foto de perfil<br>Pastor Heloyr e Delegada Ione</h1>
+  <p>Escolha sua foto, ajuste o enquadramento e baixe a imagem pronta para usar no perfil. Tudo nesta página, sem abrir outra tela.</p>
+ </section>
+ <section class="panel" aria-label="Editor de foto de perfil">
+  <div class="panel-title"><strong>Personalize sua foto</strong><span class="size-pill">PERFIL · 1080 × 1080</span></div>
+  <input type="file" id="file" accept="image/*" hidden>
+  <button class="button full" id="choose" type="button">ESCOLHER MINHA FOTO</button>
+  <div class="controls" id="controls">
+   <p class="control-heading">Ajuste o enquadramento</p>
+   <div class="zoom-row">
+    <button class="button small-button" id="minus" type="button" aria-label="Diminuir foto">−</button>
+    <input id="zoom" type="range" min="100" max="400" step="1" value="100" aria-label="Zoom da foto">
+    <button class="button small-button" id="plus" type="button" aria-label="Aumentar foto">+</button>
+    <span class="zoom-level" id="zoom-label">100%</span>
+   </div>
+   <p class="hint">Arraste a foto com o dedo ou mouse para posicionar. Use os botões para ajustar o zoom.</p>
+   <div class="control-actions">
+    <button class="button" id="reset" type="button">REDEFINIR AJUSTES</button>
+    <button class="button" id="replace" type="button">TROCAR FOTO</button>
+   </div>
+  </div>
+  <button class="button full primary download" id="download" type="button" disabled>BAIXAR FOTO DE PERFIL · PNG</button>
+  <p class="status" id="status" role="status" aria-live="polite">Carregando a moldura...</p>
+  <div class="canvas-wrap"><canvas id="canvas" width="1080" height="1080" aria-label="Prévia da foto de perfil"></canvas></div>
+ </section>
+</main>
+<footer class="footer brand-gradient">
+ <div class="foot-inner">
+  <p class="credit">Criado por <strong>David Amorim</strong></p>
+  <a class="social" href="https://www.instagram.com/_david__amorim_?stkn=MXJkMXcyNTg4bThjcw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram de David Amorim" title="Instagram de David Amorim">
+   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+  </a>
+  <hr class="footer-line">
+  <p class="legal"><span>PARTIDO PL — CNPJ DELEGADA IONE: 68.455.032/001-04</span><span>PARTIDO DEMOCRATA — CNPJ PASTOR HELOYR: 68.269.123/0001-66</span></p>
+ </div>
+</footer>
+<script>
+'use strict';
+// Coloque a moldura transparente em imagens/perfil.png.
+const FRAME_PATH = 'imagens/perfil.png';
+const canvas=document.getElementById('canvas'),ctx=canvas.getContext('2d');
+const fileInput=document.getElementById('file'),statusEl=document.getElementById('status');
+const downloadBtn=document.getElementById('download'),controls=document.getElementById('controls');
+const zoomSlider=document.getElementById('zoom'),zoomLabel=document.getElementById('zoom-label');
+let frame=null,photo=null,photoURL=null,scale=1,panX=0,panY=0,dragging=false,startX=0,startY=0,baseX=0,baseY=0,loadingFrame=true;
+function status(message,error=false){statusEl.textContent=message;statusEl.classList.toggle('error',error)}
+function canDownload(){downloadBtn.disabled=!(frame&&photo)}
+function draw(){
+ ctx.clearRect(0,0,1080,1080);
+ ctx.fillStyle='#f0f2f6';ctx.fillRect(0,0,1080,1080);
+ if(photo){
+  const ratio=Math.max(1080/photo.naturalWidth,1080/photo.naturalHeight)*scale;
+  const w=photo.naturalWidth*ratio,h=photo.naturalHeight*ratio;
+  ctx.drawImage(photo,(1080-w)/2+panX,(1080-h)/2+panY,w,h);
+ }else{
+  ctx.fillStyle='#8290a8';ctx.textAlign='center';ctx.font='bold 36px Arial';ctx.fillText('SUA FOTO AQUI',540,535);
+ }
+ if(frame) ctx.drawImage(frame,0,0,1080,1080);
+}
+function loadFrame(){
+ const img=new Image();
+ img.onload=()=>{frame=img;loadingFrame=false;draw();canDownload();status(photo?'Arraste a foto para ajustar o enquadramento.':'Moldura carregada. Escolha sua foto para começar.');};
+ img.onerror=()=>{frame=null;loadingFrame=false;draw();canDownload();status('Moldura não encontrada: adicione imagens/perfil.png ao repositório.',true)};
+ img.src=FRAME_PATH;
+}
+function reset(){scale=1;panX=0;panY=0;zoomSlider.value='100';zoomLabel.textContent='100%';draw()}
+function setZoom(value){scale=Math.max(1,Math.min(4,Number(value)/100));zoomSlider.value=String(Math.round(scale*100));zoomLabel.textContent=Math.round(scale*100)+'%';draw()}
+document.getElementById('choose').addEventListener('click',()=>fileInput.click());
+document.getElementById('replace').addEventListener('click',()=>fileInput.click());
+fileInput.addEventListener('change',()=>{
+ const file=fileInput.files?.[0];if(!file)return;
+ if(!file.type.startsWith('image/')){status('Escolha um arquivo de imagem.',true);return}
+ const url=URL.createObjectURL(file),img=new Image();
+ img.onload=()=>{if(photoURL)URL.revokeObjectURL(photoURL);photoURL=url;photo=img;reset();controls.classList.add('visible');canDownload();status(frame?'Arraste a foto para ajustar o enquadramento.':'Foto carregada, mas falta a moldura imagens/perfil.png.',!frame);fileInput.value='';};
+ img.onerror=()=>{URL.revokeObjectURL(url);status('Não foi possível abrir esta imagem. Tente JPG ou PNG.',true);fileInput.value='';};
+ img.src=url;
+});
+zoomSlider.addEventListener('input',()=>setZoom(zoomSlider.value));
+document.getElementById('minus').addEventListener('click',()=>setZoom(Math.round(scale*100)-10));
+document.getElementById('plus').addEventListener('click',()=>setZoom(Math.round(scale*100)+10));
+document.getElementById('reset').addEventListener('click',reset);
+function xy(event){const r=canvas.getBoundingClientRect();return {x:(event.clientX-r.left)*1080/r.width,y:(event.clientY-r.top)*1080/r.height}}
+canvas.addEventListener('pointerdown',e=>{if(!photo)return;dragging=true;const p=xy(e);startX=p.x;startY=p.y;baseX=panX;baseY=panY;canvas.setPointerCapture(e.pointerId)});
+canvas.addEventListener('pointermove',e=>{if(!dragging||!photo)return;const p=xy(e);panX=baseX+p.x-startX;panY=baseY+p.y-startY;draw()});
+function endDrag(){dragging=false}canvas.addEventListener('pointerup',endDrag);canvas.addEventListener('pointercancel',endDrag);canvas.addEventListener('lostpointercapture',endDrag);
+canvas.addEventListener('wheel',e=>{if(!photo)return;e.preventDefault();setZoom(Math.round(scale*100)+(e.deltaY<0?10:-10))},{passive:false});
+downloadBtn.addEventListener('click',async()=>{
+ if(!photo||!frame){status('Adicione uma foto e a moldura antes de baixar.',true);return}
+ downloadBtn.disabled=true;downloadBtn.textContent='GERANDO PNG...';
+ try{
+  draw();const blob=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(new Error('Falha ao gerar PNG')),'image/png'));
+  const url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download='Pastor-Heloyr-Delegada-Ione-Perfil.png';document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);status('Download iniciado.');
+ }catch(err){console.error(err);status('Não foi possível gerar o PNG. Tente novamente.',true)}
+ finally{downloadBtn.textContent='BAIXAR FOTO DE PERFIL · PNG';canDownload()}
+});
+draw();loadFrame();
+</script>
+</body>
+</html>
